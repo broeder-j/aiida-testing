@@ -102,7 +102,7 @@ def export_cache(hash_code_by_entrypoint):
             if default_data_dir is None:
                 default_data_dir = os.path.join(os.getcwd(), 'data_dir')  # May not be best idea
             full_export_path = os.path.join(default_data_dir, savepath)
-            #print(full_export_path)
+        #    #print(full_export_path)
 
         if isinstance(node, list):
             to_export = node
@@ -379,7 +379,7 @@ def run_with_cache(export_cache, load_cache):
             #    print("could not find the process node, don't know what to export")
 
             # if no yield
-            export_cache(node=resnode, savepath=full_import_path, overwrite=overwrite)
+            export_cache(node=resnode, savepath=full_import_path, default_data_dir='',  overwrite=overwrite)
 
         return res, resnode
 
